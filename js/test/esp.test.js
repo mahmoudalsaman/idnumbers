@@ -16,4 +16,8 @@ test('invalid DNI numbers', () => {
 test('alias NationalID behaves like DNI', () => {
   assert.strictEqual(NationalID.validate('12345678Z'), true);
   assert.strictEqual(NationalID.validate('12345678A'), false);
+
+test('invalid DNI numbers', () => {
+  assert.strictEqual(validate('1234567A'), false);
+  assert.strictEqual(validate('12345678A'), false);
 });
